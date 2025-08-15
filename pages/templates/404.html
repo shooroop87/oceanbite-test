@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Страница не найдена — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+  <section style="padding:40px 20px;text-align:center;">
+    <h1>404</h1>
+    <p>Упс! Такой страницы нет.</p>
+    <p><a href="{% url 'home' %}">На главную</a></p>
+  </section>
+{% endblock %}

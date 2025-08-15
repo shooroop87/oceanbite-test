@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Галерея — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+  <section style="padding:24px 20px;">
+    <div class="container">
+      <h1>Галерея</h1>
+      <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;">
+        {% for src in images %}
+          <a href="{% static src %}" target="_blank" rel="noopener" style="display:block;border-radius:12px;overflow:hidden;">
+            <img src="{% static src %}" alt="Фото {{ forloop.counter }}" width="600" height="340" loading="lazy">
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+{% endblock %}
