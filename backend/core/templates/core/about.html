@@ -1,0 +1,127 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}About Us - Oceanbite Seafood{% endblock %}
+
+{% block content %}
+<!--===== HERO AREA START =======-->
+<div class="hero-area1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main-heading">
+                    <h1 class="text-anime-style-3" style="color:#0F51AB; text-align:center;">
+                        About Oceanbite Seafood
+                    </h1>
+                    <div class="space30"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-10 m-auto">
+                <div class="main-heading">
+                    <div class="heading1-w" style="text-align:center;">
+                        <p data-aos="zoom-in-up" data-aos-duration="700" style="margin:0;color:#064E81;font-size: 24px;letter-spacing: 1.5px;">
+                            From European waters to your business—premium quality guaranteed.
+                        </p>
+                    </div>
+                    <div class="space60"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img class="sec-shape1" src="{% static 'img/shapes/hero-sec-shape1.png' %}" alt="">
+    <img class="sec-shape2" src="{% static 'img/shapes/hero-sec-shape2.png' %}" alt="">
+    <img class="sec-shape3 animate1" src="{% static 'img/shapes/hero-sec-shape3.png' %}" alt="">
+    <img class="sec-shape4 animate3" src="{% static 'img/shapes/hero-sec-shape4.png' %}" alt="">
+</div>
+<!--===== HERO AREA END =======-->
+
+<!--===== ABOUT CONTENT START =======-->
+<section class="about-section-split">
+    <div class="container-fluid p-0">
+        <div class="row g-0 min-vh-75">
+            
+            <!-- LEFT: Blue Content Panel -->
+            <div class="col-lg-6 d-flex align-items-center" style="background: #1e40af;">
+                <div class="about-content-panel">
+                    
+                    <h2 data-aos="fade-up" data-aos-duration="700">
+                        Our Story
+                    </h2>
+                    
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        Oceanbite Seafood began its journey in the European Union, rooted in a deep tradition of sourcing premium wild-caught seafood. Today, we've grown into a California-based business, proudly delivering superior quality seafood to partners across the U.S.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- RIGHT: Ocean Waves Image -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center ocean-image-section">
+                <!-- Ocean waves background image will be set via CSS -->
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="about-section-split">
+    <div class="container-fluid p-0">
+        <div class="row g-0 min-vh-75">
+            
+            <!-- LEFT: Fish Image -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center fish-image-section">
+                <!-- Fish image background will be set via CSS -->
+            </div>
+
+            <!-- RIGHT: Blue Content Panel -->
+            <div class="col-lg-6 d-flex align-items-center" style="background: #2563eb;">
+                <div class="hero-content-panel">
+                    
+                    <h2 data-aos="fade-up" data-aos-duration="700">
+                        Our Mission
+                    </h2>
+                    
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        With a focus on excellence, sustainability, and reliability, we bring the best of European waters to your business. We understand that every business has unique needs, and we're committed to providing tailored solutions that exceed expectations.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="final-text-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="final-text-content">
+                    
+                    <h2 data-aos="fade-up" data-aos-duration="700">
+                        Quality You Can Trust
+                    </h2>
+                    
+                    <div class="space40"></div>
+                    
+                    <div class="final-text-body" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <p>
+                            Our deep-rooted relationships with EU fisheries ensure consistent access to top-quality, wild-caught seafood that meets the highest standards of taste, safety, and sustainability. Every product we deliver is carefully selected and handled with the utmost care.
+                        </p>
+                        
+                        <div class="space20"></div>
+                        
+                        <p>
+                            Whether you require specific cuts, bulk orders, or flexible delivery schedules, we're here to support your business growth with premium seafood solutions that your customers will love.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--===== ABOUT CONTENT END =======-->
+{% endblock %}

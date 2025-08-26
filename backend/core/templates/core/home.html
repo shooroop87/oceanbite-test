@@ -1,0 +1,304 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Oceanbite Seafood - Your One-Stop Destination for Premium Seafood{% endblock %}
+
+{% block content %}
+<!--===== HERO AREA START =======-->
+<div class="hero-area1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main-heading">
+                    <h1 class="text-anime-style-3" style="color:#0F51AB; text-align:center;">
+                        Your One-Stop Destination<br> for Premium Seafood
+                    </h1>
+                    <div class="space30"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-10 m-auto">
+                <div class="main-heading">
+                    <div class="heading1-w" style="text-align:center;">
+                        <p data-aos="zoom-in-up" data-aos-duration="700" style="margin:0;color:#064E81;font-size: 32px;letter-spacing: 2.5px;">
+                            Experience the taste of the ocean—without compromise.
+                        </p>
+                    </div>
+                    <div class="space30"></div>
+
+                    <div style="text-align:center;">
+                        <a href="#products" class="hero-cta" aria-label="Explore products">
+                            <span>Explore</span>
+                            <span class="hero-cta-arrow" aria-hidden="true">→</span>
+                        </a>
+                    </div>
+
+                    <div class="space60"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img class="sec-shape1" src="{% static 'img/shapes/hero-sec-shape1.png' %}" alt="">
+    <img class="sec-shape2" src="{% static 'img/shapes/hero-sec-shape2.png' %}" alt="">
+    <img class="sec-shape3 animate1" src="{% static 'img/shapes/hero-sec-shape3.png' %}" alt="">
+    <img class="sec-shape4 animate3" src="{% static 'img/shapes/hero-sec-shape4.png' %}" alt="">
+</div>
+<!--===== HERO AREA END =======-->
+
+<!--===== PRODUCTS HERO SECTION START =======-->
+<section class="products-hero-split" id="products">
+    <div class="container-fluid p-0">
+        <div class="row g-0 min-vh-75">
+            
+            <!-- LEFT: Fish Image -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center fish-image-section">
+                <!-- Fish image background will be set via CSS -->
+            </div>
+
+            <!-- RIGHT: Blue Content Panel -->
+            <div class="col-lg-6 d-flex align-items-center" style="background: #2563eb;">
+                <div class="hero-content-panel">
+                    
+                    <!-- Small fish icon -->
+                    <div class="fish-icon mb-4" data-aos="fade-up" data-aos-duration="600">
+                        <svg width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 10C2 10 8 2 20 2C32 2 38 10 38 10C38 10 32 18 20 18C8 18 2 10 2 10Z" fill="white"/>
+                            <circle cx="25" cy="10" r="2" fill="#2563eb"/>
+                        </svg>
+                    </div>
+
+                    <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+                        Fresh from the sea, just how you want it
+                    </h1>
+                    
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                        Oceanbite Seafood specializes in wild-caught seafood from the EU and delivers a variety of products to your business.
+                    </p>
+                    
+                    <a href="#products-grid" class="hero-cta-button" data-aos="fade-up" data-aos-duration="900" data-aos-delay="600">
+                        View products
+                        <span class="cta-arrow">→</span>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--===== PRODUCTS HERO SECTION END =======-->
+
+<!--===== PRODUCTS SECTION START =======-->
+<section class="products-section" id="products-grid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="products-header text-center">
+                    <h2 class="products-main-title" data-aos="fade-up" data-aos-duration="700">Our Products</h2>
+                    
+                    <!-- Product Navigation Tabs -->
+                    <div class="products-nav-tabs" data-aos="fade-up" data-aos-duration="800">
+                        <button class="product-tab-btn active" data-category="salmon">SALMON</button>
+                        <button class="product-tab-btn" data-category="trout">TROUT</button>
+                        <button class="product-tab-btn" data-category="caviar">CAVIAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space60"></div>
+
+        <!-- Products Grid -->
+        <div class="row products-showcase" data-aos="fade-up" data-aos-duration="900">
+            
+            <!-- Navigation Arrow Left -->
+            <div class="col-auto d-flex align-items-center">
+                <button class="product-nav-arrow nav-prev" aria-label="Previous">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+            </div>
+
+            <!-- Product Cards Container -->
+            <div class="col">
+                <div class="products-slider-container">
+                    
+                    <!-- Salmon Products -->
+                    <div class="product-slide active" data-category="salmon">
+                        <div class="row justify-content-center g-4">
+                            
+                            <div class="col-lg-4 col-md-6">
+                                <div class="premium-product-card">
+                                    <div class="product-image-wrapper">
+                                        <img src="{% static 'img/products/whole-salmon.png' %}" alt="Whole Salmon" class="product-img">
+                                    </div>
+                                    <h3 class="product-name">Whole Salmon</h3>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="premium-product-card">
+                                    <div class="product-image-wrapper">
+                                        <img src="{% static 'img/all/salmon-portions.png' %}" alt="Salmon Filets & Portions" class="product-img">
+                                    </div>
+                                    <h3 class="product-name">Salmon filets & portions</h3>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="premium-product-card">
+                                    <div class="product-image-wrapper">
+                                        <img src="{% static 'img/all/smoked-salmon.png' %}" alt="Smoked Salmon" class="product-img">
+                                    </div>
+                                    <h3 class="product-name">Smoked Salmon</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Trout Products -->
+                    <div class="product-slide" data-category="trout">
+                        <div class="row justify-content-center g-4">
+                            
+                            <div class="col-lg-4 col-md-6">
+                                <div class="premium-product-card">
+                                    <div class="product-image-wrapper">
+                                        <img src="{% static 'img/all/whole-salmon.png' %}" alt="Whole Trout" class="product-img">
+                                    </div>
+                                    <h3 class="product-name">Whole Trout</h3>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6">
+                                <div class="premium-product-card">
+                                    <div class="product-image-wrapper">
+                                        <img src="{% static 'img/all/salmon-portions.png' %}" alt="Trout Filets" class="product-img">
+                                    </div>
+                                    <h3 class="product-name">Trout Filets</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Caviar Products -->
+                    <div class="product-slide" data-category="caviar">
+                        <div class="row justify-content-center g-4">
+                            
+                            <div class="col-lg-4 col-md-6">
+                                <div class="premium-product-card">
+                                    <div class="product-image-wrapper">
+                                        <img src="{% static 'img/all/smoked-salmon.png' %}" alt="Premium Caviar" class="product-img">
+                                    </div>
+                                    <h3 class="product-name">Premium Caviar</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Navigation Arrow Right -->
+            <div class="col-auto d-flex align-items-center">
+                <button class="product-nav-arrow nav-next" aria-label="Next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--===== PRODUCTS SECTION END =======-->
+
+<!--===== ABOUT SECTION START =======-->
+<section class="about-section-split">
+    <div class="container-fluid p-0">
+        <div class="row g-0 min-vh-75">
+            
+            <!-- LEFT: Blue Content Panel -->
+            <div class="col-lg-6 d-flex align-items-center" style="background: #1e40af;">
+                <div class="about-content-panel">
+                    
+                    <h2 data-aos="fade-up" data-aos-duration="700">
+                        About
+                    </h2>
+                    
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        Oceanbite Seafood began its journey in the European Union, rooted in a deep tradition of sourcing premium wild-caught seafood. Today, we've grown into a California-based business, proudly delivering superior quality seafood to partners across the U.S. With a focus on excellence, sustainability, and reliability, we bring the best of European waters to your business.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- RIGHT: Ocean Waves Image -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center ocean-image-section">
+                <!-- Ocean waves background image will be set via CSS -->
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--===== ABOUT SECTION END =======-->
+
+<!--===== NEWSLETTER SECTION START =======-->
+<section class="final-text-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="final-text-content">
+                    
+                    <h2 data-aos="fade-up" data-aos-duration="700">
+                        From European Waters to Your Business—Tailored, Trusted, and Always Fresh
+                    </h2>
+                    
+                    <div class="space40"></div>
+                    
+                    <div class="final-text-body" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <p>
+                            We specialize in delivering premium-grade salmon and trout directly from the European Union to your business—fast, fresh, and fully customized. Our deep-rooted relationships with EU fisheries ensure consistent access to top-quality, wild-caught seafood that meets the highest standards of taste, safety, and sustainability.
+                        </p>
+                        
+                        <div class="space20"></div>
+                        
+                        <p>
+                            We understand that every business has unique needs. That's why we offer tailored solutions—whether you require specific cuts, bulk orders, or flexible delivery schedules. For brands looking to expand their product line, we also provide white-label services, allowing you to offer world-class seafood under your own brand name.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--===== NEWSLETTER SECTION END =======-->
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Products Tab Functionality Enhanced
+document.addEventListener('DOMContentLoaded', function() {
+    const tabBtns = document.querySelectorAll('.product-tab-btn');
+    const productSlides = document.querySelectorAll('.product-slide');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const category = this.dataset.category;
+            
+            // Remove active class from all tabs
+            tabBtns.forEach(tab => tab.classList.remove('active'));
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Hide all product slides
+            productSlides.forEach(slide => slide.classList.remove('active'));
+            
+            // Show slide matching the category
+            document.querySelector(`[data-category="${category}"].product-slide`).classList.add('active');
+        });
+    });
+});
+</script>
+{% endblock %}

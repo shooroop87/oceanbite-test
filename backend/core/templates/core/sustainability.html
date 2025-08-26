@@ -1,0 +1,133 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Sustainability - Oceanbite Seafood{% endblock %}
+
+{% block content %}
+<!--===== HERO AREA START =======-->
+<div class="hero-area1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main-heading">
+                    <h1 class="text-anime-style-3" style="color:#0F51AB; text-align:center;">
+                        Sustainable Seafood<br> for Future Generations
+                    </h1>
+                    <div class="space30"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-10 m-auto">
+                <div class="main-heading">
+                    <div class="heading1-w" style="text-align:center;">
+                        <p data-aos="zoom-in-up" data-aos-duration="700" style="margin:0;color:#064E81;font-size: 24px;letter-spacing: 1.5px;">
+                            Committed to responsible fishing practices and ocean conservation.
+                        </p>
+                    </div>
+                    <div class="space60"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img class="sec-shape1" src="{% static 'img/shapes/hero-sec-shape1.png' %}" alt="">
+    <img class="sec-shape2" src="{% static 'img/shapes/hero-sec-shape2.png' %}" alt="">
+    <img class="sec-shape3 animate1" src="{% static 'img/shapes/hero-sec-shape3.png' %}" alt="">
+    <img class="sec-shape4 animate3" src="{% static 'img/shapes/hero-sec-shape4.png' %}" alt="">
+</div>
+<!--===== HERO AREA END =======-->
+
+<!--===== SUSTAINABILITY CONTENT START =======-->
+<section class="about-section-split">
+    <div class="container-fluid p-0">
+        <div class="row g-0 min-vh-75">
+            
+            <!-- LEFT: Blue Content Panel -->
+            <div class="col-lg-6 d-flex align-items-center" style="background: #1e40af;">
+                <div class="about-content-panel">
+                    
+                    <h2 data-aos="fade-up" data-aos-duration="700">
+                        Responsible Sourcing
+                    </h2>
+                    
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        We partner exclusively with fisheries that adhere to strict EU regulations and sustainable fishing practices. Our commitment to responsible sourcing ensures that every product supports healthy marine ecosystems and fishing communities.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- RIGHT: Ocean Waves Image -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center ocean-image-section">
+                <!-- Ocean waves background image will be set via CSS -->
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="about-section-split">
+    <div class="container-fluid p-0">
+        <div class="row g-0 min-vh-75">
+            
+            <!-- LEFT: Fish Image -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center fish-image-section">
+                <!-- Fish image background will be set via CSS -->
+            </div>
+
+            <!-- RIGHT: Blue Content Panel -->
+            <div class="col-lg-6 d-flex align-items-center" style="background: #2563eb;">
+                <div class="hero-content-panel">
+                    
+                    <h2 data-aos="fade-up" data-aos-duration="700">
+                        Ocean Conservation
+                    </h2>
+                    
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        Our wild-caught seafood comes from well-managed fisheries that use selective fishing methods to minimize bycatch and protect vulnerable species. We believe in preserving marine biodiversity for future generations.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="final-text-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="final-text-content">
+                    
+                    <h2 data-aos="fade-up" data-aos-duration="700">
+                        Our Sustainability Commitments
+                    </h2>
+                    
+                    <div class="space40"></div>
+                    
+                    <div class="final-text-body" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                        <p>
+                            <strong>Traceability:</strong> Every product can be traced back to its source, ensuring complete transparency in our supply chain. We work only with certified fisheries that meet the highest environmental standards.
+                        </p>
+                        
+                        <div class="space20"></div>
+                        
+                        <p>
+                            <strong>Minimal Impact:</strong> We prioritize low-impact fishing methods and support initiatives that reduce plastic waste in our packaging and operations. Our goal is to minimize our environmental footprint while delivering exceptional quality seafood.
+                        </p>
+                        
+                        <div class="space20"></div>
+                        
+                        <p>
+                            <strong>Community Support:</strong> We believe in supporting the fishing communities that make our business possible, ensuring fair wages and sustainable livelihoods for fishermen and their families.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--===== SUSTAINABILITY CONTENT END =======-->
+{% endblock %}

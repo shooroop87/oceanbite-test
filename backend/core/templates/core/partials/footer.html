@@ -1,0 +1,72 @@
+{% load static %}
+
+<!--===== FOOTER AREA START =======-->
+<div class="footer1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="footer-logo-area">
+                    <a href="{% url 'home' %}"><img src="{% static 'img/logos/logo_footer.svg' %}" alt="Oceanbite Seafood"></a>
+                    <div class="heading1">
+                        <p>Premium wild-caught seafood, sourced in the EU.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg col-md-6 col-6">
+                <div class="footer-list list">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="{% url 'about' %}">ABOUT</a></li>
+                        <li><a href="{% url 'contacts' %}">CONTACT</a></li>
+                        <li><a href="#">SHIPPING &amp; DELIVERY</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg col-md-6 col-6">
+                <div class="footer-list list">
+                    <ul>
+                        <li><a href="#">LEGAL</a></li>
+                        <li><a href="#">PRIVACY</a></li>
+                        <li><a href="#">ACCESSIBILITY</a></li>
+                        <li><a href="#">SITEMAP</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="footer-list">
+                    <h5>Subscribe to our Newsletter</h5>
+                    <form action="#" method="post" class="newsletter-form">
+                        {% csrf_token %}
+                        <div class="input-wrapper">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit" class="theme-btn1" aria-label="Subscribe">
+                                <i class="fa-solid fa-envelope"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="space50"></div>
+        <div class="footer-border"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="copyright-area">
+                    <p>© Copyright {% now "Y" %} Oceanbite Seafood. All Right Reserved</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="copyright-area right">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#"> Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="sec-shape2" src="{% static 'img/shapes/footer-shape2.png' %}" alt="">
+</div>
+<!--===== FOOTER AREA END =======-->
