@@ -19,8 +19,8 @@ else:
     ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost 127.0.0.1").split()
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.abroadstours.com",
-    "https://abroadstours.com",
+    "https://*.oceanbiteseafood.com",
+    "https://oceanbiteseafood.com",
     "http://localhost",
     "http://localhost:8000",
     "http://backend-1:8000",
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sitemaps",
-    # 3rd party (оставляем, если понадобятся)
+    # 3rd party
     "easy_thumbnails",
     "filer",
     "mptt",
@@ -100,8 +100,8 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.getenv("POSTGRES_DB", "abroadtours"),
-        "USER": os.getenv("POSTGRES_USER", "abroadtours_user"),
+        "NAME": os.getenv("POSTGRES_DB", "oceanbite_seafood"),
+        "USER": os.getenv("POSTGRES_USER", "oceanbite_user"),
         "PASSWORD": os.getenv("POSTGRES_PASSWORD", ""),
         "HOST": os.getenv("DB_HOST", ""),
         "PORT": int(os.getenv("DB_PORT", 5432)),
@@ -168,27 +168,10 @@ EMAIL_PORT = int(os.getenv("EMAIL_PORT", 587))
 EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS", "True").lower() == "true"
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "your-email@domain.com")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "your-password")
-DEFAULT_FROM_EMAIL = "Abroads Tours <noreply@abroadstours.com>"
-CONTACT_EMAIL = "abroadstour@gmail.com"
+DEFAULT_FROM_EMAIL = "Oceanbite Seafood <noreply@oceanbiteseafood.com>"
+CONTACT_EMAIL = "info@oceanbiteseafood.com"
 
-CONTACT_PHONE = "+39-339-2168555"
-WHATSAPP_NUMBER = "393392168555"
-
-SENDPULSE_API_USER_ID = os.getenv("SENDPULSE_API_USER_ID", "your-user-id")
-SENDPULSE_API_SECRET = os.getenv("SENDPULSE_API_SECRET", "your-secret")
-SENDPULSE_ADDRESS_BOOK_ID = os.getenv("SENDPULSE_ADDRESS_BOOK_ID", "your-book-id")
-
-GOOGLE_ANALYTICS_ID = os.getenv("GA_MEASUREMENT_ID", "GA_MEASUREMENT_ID")
-YANDEX_METRICA_ID = os.getenv("YANDEX_METRICA_ID", "YOUR_YANDEX_ID")
-BING_WEBMASTER_ID = os.getenv("BING_WEBMASTER_ID", "YOUR_BING_ID")
-BING_UET_TAG = os.getenv("BING_UET_TAG", "YOUR_BING_UET_TAG")
-GOOGLE_SITE_VERIFICATION = os.getenv("GOOGLE_SITE_VERIFICATION", "")
-YANDEX_VERIFICATION = os.getenv("YANDEX_VERIFICATION", "")
-BING_SITE_VERIFICATION = os.getenv("BING_SITE_VERIFICATION", "")
-
-HCAPTCHA_SITEKEY = os.getenv("HCAPTCHA_SITEKEY", "your-site-key-here")
-HCAPTCHA_SECRET = os.getenv("HCAPTCHA_SECRET", "your-secret-key-here")
-HCAPTCHA_DEFAULT_CONFIG = {"theme": "light", "size": "normal"}
+CONTACT_PHONE = "+1 (234) 567-890"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
@@ -248,6 +231,7 @@ CKEDITOR_5_CONFIGS = {
         ],
     },
 }
+
 TAGGIT_CASE_INSENSITIVE = True
 THUMBNAIL_FORMAT = "WEBP"
 THUMBNAIL_QUALITY = 85
