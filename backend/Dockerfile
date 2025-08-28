@@ -1,34 +1,53 @@
 FROM python:3.11-slim
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
+# Установка системных зависимостей (включая для Pillow + cron для отзывов)
+RUN apt-get update && \
+    apt-get install -y \
+        gcc \
+        libjpeg-dev \
+        zlib1g-dev \
+        libfreetype6-dev \
+        liblcms2-dev \
+        libopenjp2-7-dev \
+        libtiff-dev \
+        tk-dev \
+        tcl-dev \
+        libwebp-dev \
+        gettext \
+        cron \
+        curl && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-# Set work directory
+# Установка рабочей директории
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        postgresql-client \
-        curl \
-        build-essential \
-        libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install Python dependencies
+# Копирование зависимостей и установка Python-библиотек
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project
+# Копирование проекта
 COPY . .
 
-# Create directories for static and media files
-RUN mkdir -p collected_static media logs
+# Создание пользователя для безопасности ПЕРЕД созданием файлов
+RUN groupadd -r appuser && useradd -r -g appuser appuser
 
-# Collect static files (will be overridden by volume in docker-compose)
-RUN python manage.py collectstatic --noinput --clear || echo "Static files collection failed, but continuing..."
+# Создание директорий для медиа файлов блога, логов и статики
+RUN mkdir -p media/blog/featured media/blog/images media/uploads media/tours/featured media/tours/gallery && \
+    mkdir -p logs && \
+    mkdir -p core/static && \
+    touch logs/reviews.log logs/django.log logs/tours.log
 
-EXPOSE 8000
+# Установка прав доступа для пользователя appuser
+RUN chown -R appuser:appuser /app && \
+    chmod -R 755 /app && \
+    chmod 666 logs/*.log
 
-CMD ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Компиляция переводов
+RUN django-admin compilemessages
+
+# Переключение на пользователя appuser
+USER appuser
+
+# Запуск через Gunicorn
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "config.wsgi"]

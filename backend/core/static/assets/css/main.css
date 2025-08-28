@@ -2615,8 +2615,8 @@ body.body {
   font-style: normal;
   font-weight: 700;
   line-height: 18px; /* 100% */
-  padding: 10px 10px 10px 16px;
-  background-color: var(--vtc-bg-main-1);
+  padding: 16px 10px 16px 16px;
+  background-color: #3C55FF;
   border-radius: 25px;
   display: inline-block;
   transition: all 0.4s;
@@ -13430,10 +13430,12 @@ li.has-dropdown1 span {
 ::::::::::::::::::::::::::
 *//*# sourceMappingURL=main.css.map */
 .hero-area1 .hero-cta{
-  font-size: 18px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: #B1D4DF;
   display:inline-flex; align-items:center; gap:12px;
-  padding:18px 36px; border-radius:999px;
-  background:#3F5DFF; color:#fff; font-weight:800; text-decoration:none;
+  padding:18px 64px; border-radius:999px;
+  background:#3F5DFF; font-weight:800; text-decoration:none;
   box-shadow:0 10px 24px rgba(63,93,255,.25);
   transition:transform .15s ease, box-shadow .15s ease, opacity .15s ease;
 }

@@ -9,33 +9,13 @@
                     <div class="header-elements">
                         <div class="site-logo">
                             <a href="{% url 'home' %}">
-                                <img src="{% static 'img/logos/logo_footer.svg' %}" alt="Oceanbite Seafood">
+                                <img src="{% static 'assets/img/logos/logo_footer.svg' %}" alt="Oceanbite Seafood">
                             </a>
                         </div>
 
                         <div class="main-menu-ex main-menu-ex1">
                             <ul>
-                                <li><a href="#" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home <i class="fa-solid fa-angle-down"></i></a>
-                                    <div class="tp-submenu">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="all-images-menu">
-                                                    <div class="homemenu-thumb">
-                                                        <div class="img1">
-                                                            <img src="{% static 'img/demo/demo1.png' %}" alt="">
-                                                        </div>
-                                                        <div class="homemenu-btn">
-                                                            <a class="header-btn1" href="{% url 'home' %}">Multi Page <i class="fa-solid fa-arrow-right"></i></a>
-                                                            <div class="space16"></div>
-                                                            <a class="header-btn1" href="{% url 'home' %}" target="_blank">One page <i class="fa-solid fa-arrow-right"></i></a>
-                                                        </div>
-                                                        <a href="{% url 'home' %}" class="heading">Home 1</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                <li><a href="#" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">Products</a></li>
                                 <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About Us</a></li>
                                 <li><a href="{% url 'sustainability' %}" class="{% if request.resolver_match.url_name == 'sustainability' %}active{% endif %}">Sustainability</a></li>
                                 <li><a href="{% url 'contacts' %}" class="{% if request.resolver_match.url_name == 'contacts' %}active{% endif %}">Contacts</a></li>       
@@ -58,7 +38,7 @@
         <div class="col-12">
             <div class="mobile-header-elements">
                 <div class="mobile-logo">
-                    <a href="{% url 'home' %}"><img src="{% static 'img/logos/logo_footer.svg' %}" alt="Oceanbite Seafood"></a>
+                    <a href="{% url 'home' %}"><img src="{% static 'assets/img/logos/logo_footer.svg' %}" alt="Oceanbite Seafood"></a>
                 </div>
                 <div class="mobile-nav-icon">
                     <i class="fa-duotone fa-bars-staggered"></i>
@@ -70,19 +50,14 @@
 
 <div class="mobile-sidebar d-block d-lg-none">
     <div class="logo-m">
-        <a href="{% url 'home' %}"><img src="{% static 'img/logos/logo_footer.svg' %}" alt="Oceanbite Seafood"></a>
+        <a href="{% url 'home' %}"><img src="{% static 'assets/img/logos/logo_footer.svg' %}" alt="Oceanbite Seafood"></a>
     </div>
     <div class="menu-close">
         <i class="fa-solid fa-xmark"></i>
     </div>
     <div class="mobile-nav">
         <ul>
-            <li class="has-dropdown"><a href="#">Home </a> 
-                <ul class="sub-menu">
-                    <li><a href="{% url 'home' %}">Multipage</a></li>
-                    <li><a href="{% url 'home' %}">Landing Page</a></li>
-                </ul>
-            </li>
+            <li class="has-dropdown"><a href="#">Products</a></li>
             <li><a href="{% url 'about' %}">About Us</a></li>
             <li><a href="{% url 'sustainability' %}">Sustainability</a></li>
             <li><a href="{% url 'contacts' %}">Contacts</a></li>
@@ -108,16 +83,6 @@
                     <a href="tel:+880123456789">California, USA</a>
                 </div>
             </div>
-        </div>
-
-        <div class="contact-infos">
-            <h3>Follow Us</h3>
-            <ul class="social-icon">
-                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            </ul>
         </div>
     </div>
 </div>

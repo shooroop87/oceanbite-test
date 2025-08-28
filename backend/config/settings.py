@@ -127,6 +127,7 @@ LANGUAGES = [
 
 LOCALE_PATHS = [BASE_DIR / "core" / "locale"]
 
+# Static & media
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "core" / "static"]
 STATIC_ROOT = BASE_DIR / "collected_static"
@@ -134,11 +135,13 @@ STATIC_ROOT = BASE_DIR / "collected_static"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-FILE_UPLOAD_PERMISSIONS = 0o644
-FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o755
+FILE_UPLOAD_PERMISSIONS = 0o644  # rw-r--r--
+FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o755  # rwxr-xr-x
 
+# Создаем медиа-директорию если не существует
 os.makedirs(MEDIA_ROOT, exist_ok=True)
 
+# Filer / thumbnails
 THUMBNAIL_HIGH_RESOLUTION = True
 THUMBNAIL_QUALITY = 90
 THUMBNAIL_PROCESSORS = (
@@ -149,6 +152,7 @@ THUMBNAIL_PROCESSORS = (
     "easy_thumbnails.processors.filters",
 )
 
+# Cache / static storage
 if DEBUG:
     STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
     CACHES = {"default": {"BACKEND": "django.core.cache.backends.dummy.DummyCache"}}
