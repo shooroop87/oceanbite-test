@@ -32,7 +32,7 @@ services:
     restart: unless-stopped
 
   backend:
-    image: egorovdocker/abroadtours_backend
+    image: egorovdocker/oceanbite_backend
     env_file: .env
     volumes:
       - static_volume:/app/collected_static
@@ -46,7 +46,7 @@ services:
 
   # Автообновление отзывов каждые 12 часов
   reviews-updater:
-    image: egorovdocker/abroadtours_backend
+    image: egorovdocker/oceanbite_backend
     env_file: .env
     depends_on:
       db:
@@ -66,7 +66,7 @@ services:
     restart: unless-stopped
 
   gateway:
-    image: egorovdocker/abroadtours_gateway
+    image: egorovdocker/oceanbite_gateway
     env_file: .env
     volumes:
       - static_volume:/staticfiles:ro   # nginx location /static/ -> alias /staticfiles/
@@ -113,7 +113,7 @@ services:
     command: >
       sh -c "
         echo 'Creating database backup...' &&
-        pg_dump -h db -U ${POSTGRES_USER:-postgres} ${POSTGRES_DB:-abroadtours} > /backups/backup_$(date +%Y%m%d_%H%M%S).sql &&
+        pg_dump -h db -U ${POSTGRES_USER:-postgres} ${POSTGRES_DB:-oceanbite} > /backups/backup_$(date +%Y%m%d_%H%M%S).sql &&
         echo 'Database backup created' &&
         find /backups -name 'backup_*.sql' -mtime +7 -delete &&
         echo 'Old backups cleaned up'
@@ -147,7 +147,7 @@ services:
         docker stats --no-stream --format 'table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}' &&
         echo '' &&
         echo 'Volume Usage:' &&
-        docker system df -v | grep -E '(VOLUME NAME|abroadtours)' || true
+        docker system df -v | grep -E '(VOLUME NAME|oceanbite)' || true
       "
 
   docker-cleaner:
