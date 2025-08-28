@@ -13520,3 +13520,27 @@ li.has-dropdown1 span {
         width: 160px;
     }
 }
+@media (max-width: 768px) {
+    .fish-image-section {
+        min-height: 300px!important;
+    }
+}
+@media (max-width: 768px) {
+    .hero-area1 {
+        min-height: 750px;
+        position: relative;
+          z-index: 0;
+          padding-top: 175px;
+    }
+    .hero-area1 .hero-cta {
+      font-size: 22px;
+      padding: 14px 48px;
+    }
+    .heading1-w p {
+      letter-spacing: 1.7px;
+    }
+    .hero-area1 .main-heading h1 { 
+      font-size: 54px;
+      line-height: 56px;
+    }
+}

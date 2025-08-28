@@ -182,28 +182,29 @@
        .product-tab-btn {
          background: #e5e7eb;
          border: none;
-         padding: 16px 40px;
+         padding: 14px 50px;
          font-size: 16px;
          font-weight: 600;
-         color: #6b7280;
+         color: #000;
          cursor: pointer;
          transition: all 0.3s ease;
          text-transform: uppercase;
          letter-spacing: 1px;
          border-radius: 0;
+         border-radius: 25px 25px 25px 25px;
        }
 
        .product-tab-btn:first-child {
-         border-radius: 25px 0 0 25px;
+         border-radius: 25px 25px 25px 25px;
        }
 
        .product-tab-btn:last-child {
-         border-radius: 0 25px 25px 0;
+         border-radius: 25px 25px 25px 25px;
        }
 
        .product-tab-btn.active {
-         background: #a855f7;
-         color: white;
+         background: #9BA9FF;
+    color: #000;
        }
 
        .product-tab-btn:hover:not(.active) {
@@ -404,10 +405,22 @@
          }
 
          .about-content-panel p {
-           font-size: 16px;
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 500px;
+            color: #fff;
          }
+.final-text-body p {
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 500px;
+}
 
-         .ocean-image-container {
+         .fish-image-container {
            min-height: 300px;
          }
          
@@ -432,3 +445,27 @@
            margin-top: 20px;
          }
        }
+
+.header-area1 .header-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-area1 .header-elements .main-menu-ex {
+    position: absolute;
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+.header-phone a:hover {
+    color: #2293A7 !important;
+}
+@media (max-width: 768px) {
+    .about-content-panel h2 {
+        font-size: 32px;
+    }
+    .hero-content-panel p {
+        font-size: 20px;
+    }
+}

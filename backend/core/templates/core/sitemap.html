@@ -1,0 +1,282 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Sitemap - Oceanbite Seafood{% endblock %}
+
+{% block content %}
+<div class="hero-area1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="main-heading">
+                    <h1 class="text-anime-style-3" style="color:#0F51AB; text-align:center;">
+                        Sitemap
+                    </h1>
+                    <div class="space30"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="products-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="sitemap-container">
+                    
+                    <div class="sitemap-section">
+                        <h2>Main Pages</h2>
+                        <div class="sitemap-links">
+                            <div class="sitemap-item">
+                                <h3><a href="{% url 'home' %}">Home</a></h3>
+                                <p>Your one-stop destination for premium seafood. Overview of our products and services.</p>
+                            </div>
+                            
+                            <div class="sitemap-item">
+                                <h3><a href="{% url 'about' %}">About Us</a></h3>
+                                <p>Learn about our story, mission, and commitment to quality seafood sourcing.</p>
+                            </div>
+                            
+                            <div class="sitemap-item">
+                                <h3><a href="{% url 'sustainability' %}">Sustainability</a></h3>
+                                <p>Our commitment to responsible fishing practices and ocean conservation.</p>
+                            </div>
+                            
+                            <div class="sitemap-item">
+                                <h3><a href="{% url 'contacts' %}">Contact Us</a></h3>
+                                <p>Get in touch with our team for inquiries, orders, and support.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sitemap-section">
+                        <h2>Product Categories</h2>
+                        <div class="sitemap-links">
+                            <div class="sitemap-item">
+                                <h3>Salmon Products</h3>
+                                <ul class="product-list">
+                                    <li>Whole Salmon</li>
+                                    <li>Salmon Filets & Portions</li>
+                                    <li>Smoked Salmon</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="sitemap-item">
+                                <h3>Trout Products</h3>
+                                <ul class="product-list">
+                                    <li>Whole Trout</li>
+                                    <li>Trout Filets</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="sitemap-item">
+                                <h3>Caviar</h3>
+                                <ul class="product-list">
+                                    <li>Premium Caviar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sitemap-section">
+                        <h2>Information Pages</h2>
+                        <div class="sitemap-links">
+                            <div class="sitemap-item">
+                                <h3><a href="{% url 'faq' %}">FAQ</a></h3>
+                                <p>Frequently asked questions about our products, ordering, and services.</p>
+                            </div>
+                            
+                            <div class="sitemap-item">
+                                <h3><a href="{% url 'shipping_delivery' %}">Shipping & Delivery</a></h3>
+                                <p>Information about our delivery areas, methods, packaging, and processing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sitemap-section">
+                        <h2>Legal & Policy Pages</h2>
+                        <div class="sitemap-links">
+                            <div class="sitemap-item">
+                                <h3><a href="{% url 'legal' %}">Legal</a></h3>
+                                <p>Terms of service, compliance information, and legal disclosures.</p>
+                            </div>
+                            
+                            <div class="sitemap-item">
+                                <h3><a href="{% url 'privacy' %}">Privacy Policy</a></h3>
+                                <p>How we collect, use, and protect your personal and business information.</p>
+                            </div>
+                            
+                            <div class="sitemap-item">
+                                <h3><a href="{% url 'accessibility' %}">Accessibility</a></h3>
+                                <p>Our commitment to digital accessibility and inclusive web design.</p>
+                            </div>
+                            
+                            <div class="sitemap-item">
+                                <h3><a href="{% url 'sitemap' %}">Sitemap</a></h3>
+                                <p>Complete overview of all pages and sections on our website.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sitemap-section">
+                        <h2>Contact Information</h2>
+                        <div class="contact-sitemap">
+                            <div class="contact-method">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+18184548765">(818) 454-8765</a></p>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <h4>Email</h4>
+                                <p><a href="mailto:contact@oceanbiteseafood.com">contact@oceanbiteseafood.com</a></p>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <h4>Address</h4>
+                                <p>4695 MacArthur Ct, FL 11<br>Newport Beach, CA 92660<br>United States</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sitemap-section">
+                        <h2>Business Hours</h2>
+                        <div class="hours-info">
+                            <p><strong>Customer Service & Orders:</strong></p>
+                            <p>Monday - Friday: 8:00 AM - 5:00 PM PST</p>
+                            <p>Saturday - Sunday: Closed</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.sitemap-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sitemap-section {
+    margin-bottom: 3rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.sitemap-section h2 {
+    color: #4f46e5;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #4f46e5;
+}
+
+.sitemap-links {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.sitemap-item {
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 6px;
+    background: #f8fafc;
+}
+
+.sitemap-item h3 {
+    margin-bottom: 0.5rem;
+    color: #064E81;
+}
+
+.sitemap-item h3 a {
+    color: #064E81;
+    text-decoration: none;
+}
+
+.sitemap-item h3 a:hover {
+    color: #4f46e5;
+    text-decoration: underline;
+}
+
+.sitemap-item p {
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+}
+
+.product-list li {
+    color: #475569;
+    padding: 0.25rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.product-list li:before {
+    content: "•";
+    color: #4f46e5;
+    position: absolute;
+    left: 0;
+}
+
+.contact-sitemap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact-method {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #4f46e5;
+}
+
+.contact-method h4 {
+    color: #064E81;
+    margin-bottom: 0.5rem;
+}
+
+.contact-method p {
+    color: #475569;
+    margin: 0;
+}
+
+.contact-method a {
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+.contact-method a:hover {
+    text-decoration: underline;
+}
+
+.hours-info {
+    background: #e0f2fe;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #0ea5e9;
+}
+
+.hours-info p {
+    margin: 0.25rem 0;
+    color: #475569;
+}
+
+@media (max-width: 768px) {
+    .contact-sitemap {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{% endblock %}
