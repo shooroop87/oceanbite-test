@@ -30,90 +30,128 @@
         </div>
     </div>
 
-    <img class="sec-shape1" src="{% static 'img/shapes/hero-sec-shape1.png' %}" alt="">
-    <img class="sec-shape2" src="{% static 'img/shapes/hero-sec-shape2.png' %}" alt="">
-    <img class="sec-shape3 animate1" src="{% static 'img/shapes/hero-sec-shape3.png' %}" alt="">
-    <img class="sec-shape4 animate3" src="{% static 'img/shapes/hero-sec-shape4.png' %}" alt="">
+    <img class="sec-shape1" src="{% static 'assets/img/shapes/hero-sec-shape1.png' %}" alt="">
+    <img class="sec-shape2" src="{% static 'assets/img/shapes/hero-sec-shape2.png' %}" alt="">
+    <img class="sec-shape3 animate1" src="{% static 'assets/img/shapes/hero-sec-shape3.png' %}" alt="">
+    <img class="sec-shape4 animate3" src="{% static 'assets/img/shapes/hero-sec-shape4.png' %}" alt="">
 </div>
 <!--===== HERO AREA END =======-->
 
-<!--===== ABOUT CONTENT START =======-->
+<!--===== ABOUT STORY SECTION START =======-->
 <section class="about-section-split">
     <div class="container-fluid p-0">
         <div class="row g-0 min-vh-75">
             
-            <!-- LEFT: Blue Content Panel -->
-            <div class="col-lg-6 d-flex align-items-center" style="background: #1e40af;">
+            <!-- LEFT: Content Panel -->
+            <div class="col-lg-6 d-flex align-items-center" style="background: linear-gradient(135deg, #064E81 0%, #4f46e5 100%);">
                 <div class="about-content-panel">
-                    
-                    <h2 data-aos="fade-up" data-aos-duration="700">
-                        Our Story
+                    <h2 data-aos="fade-up" data-aos-duration="700" style="color: white; font-size: 48px; margin-bottom: 30px;">
+                        About Oceanbite Seafood
                     </h2>
                     
-                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                        Oceanbite Seafood began its journey in the European Union, rooted in a deep tradition of sourcing premium wild-caught seafood. Today, we've grown into a California-based business, proudly delivering superior quality seafood to partners across the U.S.
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" style="color: white; font-size: 18px; line-height: 1.7;">
+                        Oceanbite Seafood was born from a passion for exceptional seafood and a commitment to sustainable sourcing. Our story began in the heart of the European Union, where we built strong relationships with trusted fisheries and developed deep expertise in the wild-caught seafood industry. With a focus on quality, traceability, and reliability, we quickly established a reputation for excellence among European partners.
                     </p>
-
                 </div>
             </div>
 
-            <!-- RIGHT: Ocean Waves Image -->
-            <div class="col-lg-6 d-flex align-items-center justify-content-center ocean-image-section">
-                <!-- Ocean waves background image will be set via CSS -->
+            <!-- RIGHT: Ocean/Fjord Image -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center" style="background-image: url('{% static 'assets/img/all/ocean-fjord.jpg' %}'); background-size: cover; background-position: center; min-height: 600px;">
+                <!-- Background image will be set via inline style above -->
             </div>
 
         </div>
     </div>
 </section>
+<!--===== ABOUT STORY SECTION END =======-->
 
+<!--===== EXPANSION SECTION START =======-->
+<section style="background: linear-gradient(180deg, #e0f7fa 0%, #b2ebf2 100%); padding: 80px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p data-aos="fade-up" data-aos-duration="700" style="font-size: 28px; color: #064E81; font-weight: 500; max-width: 900px; margin: 0 auto; line-height: 1.6;">
+                    As demand for premium seafood grew, so did we. Oceanbite has since expanded across the Atlantic and is now proudly headquartered in California, where we continue to serve the needs of businesses across the U.S. Our mission is to bridge the gap between Europe's rich fishing traditions and the growing appetite for superior-quality seafood in North America.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Decorative Fish Icons -->
+    <div style="position: absolute; right: 10%; top: 50%; transform: translateY(-50%);">
+        <svg width="60" height="30" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg" data-aos="fade-left" data-aos-duration="1000">
+            <path d="M3 15C3 15 12 3 30 3C48 3 57 15 57 15C57 15 48 27 30 27C12 27 3 15 3 15Z" fill="#4f46e5"/>
+            <circle cx="38" cy="15" r="3" fill="white"/>
+        </svg>
+    </div>
+    
+    <div style="position: absolute; right: 15%; top: 30%; transform: translateY(-50%);">
+        <svg width="45" height="22" viewBox="0 0 45 22" fill="none" xmlns="http://www.w3.org/2000/svg" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+            <path d="M2 11C2 11 9 2 22 2C35 2 43 11 43 11C43 11 35 20 22 20C9 20 2 11 2 11Z" fill="#2563eb"/>
+            <circle cx="28" cy="11" r="2" fill="white"/>
+        </svg>
+    </div>
+    
+    <div style="position: absolute; right: 8%; top: 70%; transform: translateY(-50%);">
+        <svg width="50" height="25" viewBox="0 0 50 25" fill="none" xmlns="http://www.w3.org/2000/svg" data-aos="fade-left" data-aos-duration="1400" data-aos-delay="400">
+            <path d="M2 12C2 12 10 2 25 2C40 2 48 12 48 12C48 12 40 23 25 23C10 23 2 12 2 12Z" fill="#1e40af"/>
+            <circle cx="32" cy="12" r="2.5" fill="white"/>
+        </svg>
+    </div>
+</section>
+<!--===== EXPANSION SECTION END =======-->
+
+<!--===== PRODUCTS & SERVICES SECTION START =======-->
 <section class="about-section-split">
     <div class="container-fluid p-0">
         <div class="row g-0 min-vh-75">
             
             <!-- LEFT: Fish Image -->
-            <div class="col-lg-6 d-flex align-items-center justify-content-center fish-image-section">
-                <!-- Fish image background will be set via CSS -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center" style="background-image: url('{% static 'assets/img/all/salmon-portions.png' %}'); background-size: cover; background-position: center; min-height: 600px;">
+                <!-- Background image -->
             </div>
 
-            <!-- RIGHT: Blue Content Panel -->
-            <div class="col-lg-6 d-flex align-items-center" style="background: #2563eb;">
+            <!-- RIGHT: Content Panel -->
+            <div class="col-lg-6 d-flex align-items-center" style="background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);">
                 <div class="hero-content-panel">
-                    
-                    <h2 data-aos="fade-up" data-aos-duration="700">
-                        Our Mission
+                    <h2 data-aos="fade-up" data-aos-duration="700" style="color: white; font-size: 42px; margin-bottom: 25px;">
+                        What We Do
                     </h2>
                     
-                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                        With a focus on excellence, sustainability, and reliability, we bring the best of European waters to your business. We understand that every business has unique needs, and we're committed to providing tailored solutions that exceed expectations.
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" style="color: white; font-size: 17px; line-height: 1.7; margin-bottom: 25px;">
+                        We specialize in salmon and trout—sourced directly from EU-certified fisheries—and offer a carefully curated selection of other high-grade seafood products. Every item we deliver meets rigorous standards for freshness, flavor, and sustainability.
                     </p>
-
+                    
+                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="color: white; font-size: 17px; line-height: 1.7;">
+                        At Oceanbite, we understand the unique demands of B2B clients, from restaurants and wholesalers to food service providers and retailers. That's why we provide tailored supply solutions, flexible order volumes, and full white-label services for brands looking to offer premium seafood under their own name.
+                    </p>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+<!--===== PRODUCTS & SERVICES SECTION END =======-->
 
-<section class="final-text-section">
+<!--===== PARTNERSHIP SECTION START =======-->
+<section class="final-text-section" style="background: #f8fafc; padding: 100px 0;">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 mx-auto">
-                <div class="final-text-content">
+                <div class="final-text-content text-center">
                     
-                    <h2 data-aos="fade-up" data-aos-duration="700">
-                        Quality You Can Trust
+                    <h2 data-aos="fade-up" data-aos-duration="700" style="color: #064E81; font-size: 42px; margin-bottom: 40px;">
+                        More than just a supplier, we aim to be your strategic partner—delivering consistent quality.
                     </h2>
                     
                     <div class="space40"></div>
                     
                     <div class="final-text-body" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                        <p>
+                        <p style="font-size: 19px; color: #475569; line-height: 1.8; margin-bottom: 25px;">
                             Our deep-rooted relationships with EU fisheries ensure consistent access to top-quality, wild-caught seafood that meets the highest standards of taste, safety, and sustainability. Every product we deliver is carefully selected and handled with the utmost care.
                         </p>
                         
-                        <div class="space20"></div>
-                        
-                        <p>
+                        <p style="font-size: 19px; color: #475569; line-height: 1.8;">
                             Whether you require specific cuts, bulk orders, or flexible delivery schedules, we're here to support your business growth with premium seafood solutions that your customers will love.
                         </p>
                     </div>
@@ -123,5 +161,5 @@
         </div>
     </div>
 </section>
-<!--===== ABOUT CONTENT END =======-->
+<!--===== PARTNERSHIP SECTION END =======-->
 {% endblock %}
